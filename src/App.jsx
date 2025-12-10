@@ -47,7 +47,6 @@ function App() {
             </div>
           }
         />
-
         {/* Handle unknown routes */}
         {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>
