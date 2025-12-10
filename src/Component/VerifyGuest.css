@@ -1,0 +1,155 @@
+.verify-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* ⬆️ PANDISHA juu badala ya center */
+  background: linear-gradient(to right, rgba(40, 5, 5, 0.801), rgba(50, 5, 5, 0.872)),
+    url("/mama.jpg") center/cover no-repeat;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 40px 20px; /* imeongezwa padding ya juu */
+  margin: 0 auto;
+}
+
+.verify-container h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.verify-container p {
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.verify-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 13px 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 220px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+.switch-btn {
+  margin-top: 10px;
+  background-color: #28a745;
+}
+
+.switch-btn.cancel {
+  background-color: #dc3545;
+}
+
+.verify-result {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 350px;
+  color: white;
+  font-size: 1em;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.verify-result.success {
+  background-color: rgba(0, 128, 0, 0.7);
+}
+
+.verify-result.error {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.verify-result.checked {
+  background-color: rgba(255, 165, 0, 0.7);
+}
+
+.guest-info {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* ✅ Scanner box improved */
+.scanner-box {
+  width: 330px;
+  height: 330px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-50px); /* ⬆️ PANDISHA juu zaidi */
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 0;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Video camera styling — clear & sharp */
+.scanner-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* inafanya camera ifit vizuri */
+  border-radius: 12px;
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02); /* kidogo kuzoom kusaidia focus */
+}
+
+
+
+/* Small fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Optional: improve camera look on phones */
+@media (max-width: 480px) {
+  .scanner-box {
+    width: 90vw;
+    height: 90vw;
+    transform: translateY(-40px);
+  }
+}
