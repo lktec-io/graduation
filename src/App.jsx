@@ -8,6 +8,7 @@ import InvitationCard from "./Component/InvitationCard";
 import MapSection from "./Component/MapSection";
 import RSVPSection from "./Component/RSVPSection";
 import VerifyGuest from "./Component/VerifyGuest";
+import './style.css';
 
 
 function App() {
