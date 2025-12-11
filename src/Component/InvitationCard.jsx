@@ -13,7 +13,7 @@ export default function InvitationCard() {
     const fetchGuest = async () => {
       try {
         const res = await fetch(
-          `https://wedding.nardio.online/api/graduation/${uuid}`
+          `https://graduation.nardio.online/api/graduation/${uuid}`
         );
         if (!res.ok) throw new Error("Guest not found");
         const data = await res.json();
